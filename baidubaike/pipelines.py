@@ -7,5 +7,14 @@
 
 
 class BaidubaikePipeline(object):
+    def __init__(self):
+        #if we use mongodb,we can init the link pool here
+        pass
     def process_item(self, item, spider):
+        content = item['content']
+        filename = item['filename']
+        with open(filename, 'a') as fp:
+            fp.write(content)
         return item
+    def __destory__(self):
+        pass
