@@ -24,7 +24,7 @@ ITEM_PIPELINES = {
 }
 REDIS_ITEMS_KEY = '%(spider)s:items'
 REDIS_ITEMS_SERIALIZER = 'json.dumps'
-#REDIS_URL = 'redis://user:pass@hostname:9001'
+REDIS_URL = 'redis://:123456@hostname:6379/1'
 REDIS_START_URLS_AS_SET = True
 REDIS_START_URLS_KEY = '%(name)s:start_urls'
 
