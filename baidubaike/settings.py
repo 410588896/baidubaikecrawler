@@ -19,9 +19,9 @@ DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 SCHEDULER_SERIALIZER = "scrapy_redis.picklecompat"
 SCHEDULER_PERSIST = True
 SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.PriorityQueue'
-ITEM_PIPELINES = {
-    'scrapy_redis.pipelines.RedisPipeline': 300
-}
+#ITEM_PIPELINES = {
+#    'scrapy_redis.pipelines.RedisPipeline': 300
+#}
 REDIS_ITEMS_KEY = '%(spider)s:items'
 REDIS_ITEMS_SERIALIZER = 'json.dumps'
 REDIS_URL = 'redis://:123456@127.0.0.1:6379/1'
@@ -78,9 +78,9 @@ COOKIES_ENABLED = False
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'baidubaike.pipelines.BaidubaikePipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'baidubaike.pipelines.BaidubaikePipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

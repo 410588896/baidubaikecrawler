@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 # Define your item pipelines here
 #
@@ -11,10 +14,10 @@ class BaidubaikePipeline(object):
         #if we use mongodb,we can init the link pool here
         pass
     def process_item(self, item, spider):
-        content = item['content']
+        data = item['data']
         filename = item['filename']
-        with open(filename, 'a') as fp:
-            fp.write(content)
+        with open(u"/data/yuliao/" + filename, 'a') as fp:
+            fp.write(data)
         return item
     def __destory__(self):
         pass

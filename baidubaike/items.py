@@ -11,6 +11,6 @@ import scrapy
 class BaidubaikeItem(scrapy.Item):
     # define the fields for your item here like:
     url = scrapy.Field()
-    content = scrapy.Field()
+    data = scrapy.Field()
     filename = scrapy.Field()
      
